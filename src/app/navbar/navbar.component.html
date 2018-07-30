@@ -1,0 +1,33 @@
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Prosa</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">person</i>
+          <div class = "mdl-tooltip mdl-tooltip--large" for = "demo-menu-lower-right">Usuário</div>
+        </button>		        
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Prosa</span>    
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" routerLink="/dashboard"><i class="material-icons">home</i> Início</a>
+      <a class="mdl-navigation__link" routerLink="/propostas"><i class="material-icons">work_outline</i> Propostas</a>
+    </nav>
+     <nav class="mdl-navigation">     	
+          <a class="mdl-navigation__link"><i class="material-icons">exit_to_app</i> Sair</a>
+      </nav>
+  </div>
+</div>
+
+
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"   for="demo-menu-lower-right">    
+<li class="mdl-menu__item">
+  <a class = "mdl-button mdl-js-button mdl-button--icon" data-upgraded = ",MaterialButton"> 
+    <i class="material-icons">exit_to_app</i> 
+  </a> Sair      
+</li>  
+</ul>

@@ -1,0 +1,44 @@
+<br><br><br><br>
+<section class="mdl-grid" id="my-table">
+    <div class="mdl-layout-spacer"></div>
+        <div class="mdl-cell mdl-cell--6-col-tablet mdl-cell--10-col-desktop mdl-cell--stretch">        
+
+        <a routerLink="/propostas/new" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+            Nova proposta
+        </a>
+            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+            <thead>
+                <tr>
+                <th>Identificação</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Data de Início</th>
+                <th>Data final</th>                
+                <th>Cidade</th>
+                <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let proposta of propostas">
+                <td>{{proposta.id}}</td>
+                <td>{{proposta.attributes.nome}}</td>
+                <td>{{proposta.attributes.descricao}}</td>
+                <td>{{proposta.attributes.valor}}</td>
+                <td>{{proposta.attributes.inicio}}</td>
+                <td>{{proposta.attributes.fim}}</td>
+                <td>{{proposta.relationships.cidade.data.nome}}</td>
+                <td>
+                    <a routerLink="/propostas/{{proposta.id}}" class="mdl-button mdl-js-button mdl-button--fab mdl-button--primary">
+                        <i class="material-icons">edit</i>
+                    </a>                    
+                    <a (click)="deleteProposta(proposta)" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--secundary">
+                        <i class="material-icons">delete</i>
+                    </a>
+                </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    <div class="mdl-layout-spacer"></div>
+</section>    
